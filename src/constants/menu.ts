@@ -1,10 +1,4 @@
-import {
-    Home as IconHome,
-    Info as IconInfo,
-    CreditCard as IconCreditCard,
-    MessageCircle as IconMessageCircle,
-    LucideIcon
-} from 'lucide-react';
+import { Home as IconHome, MessageCircle as IconMessageCircle, LucideIcon } from 'lucide-react';
 
 interface NavLink {
     readonly name: string;

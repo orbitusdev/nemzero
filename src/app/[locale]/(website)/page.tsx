@@ -1,6 +1,6 @@
 'use client';
 
-import { BackgroundPatterns, NewsletterConfirmDialog, Testimonials } from '@/components/website';
+import { BackgroundPatterns, NewsletterConfirmDialog } from '@/components/website';
 import { Hero } from './home/components';
 import { LibraryLogos } from '@/components/shared';
 

@@ -36,8 +36,8 @@ export const ContactForm = () => {
     const [formStatus, setFormStatus] = useState<FormStatus>('idle');
     const [actionError, setActionError] = useState<string | null>(null);
 
-    let name: string = '';
-    let email: string = '';
+    const name: string = '';
+    const email: string = '';
 
     const form = useForm<ContactFormData>({
         resolver: zodResolver(ContactFormSchema(t as SimpleTFunction)),

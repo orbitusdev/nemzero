@@ -1,0 +1,18 @@
+import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { generatePageMetadata } from '@/lib';
+
+export async function generateMetadata(): Promise<Metadata> {
+    const t = await getTranslations('faq');
+    return await generatePageMetadata({
+        params: Promise.resolve({
+            title: t('title'),
+            description: t('description')
+        })
+    });
+}
+
+export default async function Page() {
+    const t = await getTranslations('faq');
+    return <>{t('title')}</>;
+}

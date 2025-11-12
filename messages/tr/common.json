@@ -1,0 +1,236 @@
+{
+    "title": "Nitrokit - Next.js Uygulamaları için Nihai Başlangıç Kiti",
+    "description": "Nitrokit ile Next.js projelerinize hızlı bir başlangıç yapın; kimlik doğrulama, uluslararasılaştırma ve daha fazlasını içeren kapsamlı bir başlangıç kiti.",
+    "name": "Nitrokit Next.js",
+    "shortName": "Nitrokit",
+    "welcome": "Nitrokit'e Hoş Geldiniz!",
+    "loading": "Yükleniyor...",
+    "allRightsReserved": "Tüm hakları saklıdır.",
+    "contactUs": "Bize Ulaşın",
+    "metadata": {
+        "applicationName": "Nitrokit Next.js",
+        "title": "Nitrokit - Yıldırım Hızında Next.js Başlangıç Kiti",
+        "description": "Nitrokit'in kapsamlı Next.js başlangıç kiti ile modern web uygulamaları geliştirin. TypeScript, Tailwind CSS, kimlik doğrulama ve daha fazlasını içerir.",
+        "author": "Nitrokit Ekibi"
+    },
+    "buttons": {
+        "email": "E-posta",
+        "firstname": "İsim",
+        "lastname": "Soyisim",
+        "password": "Şifre",
+        "confirmPassword": "Şifreyi Doğrula",
+        "submit": "Gönder",
+        "cancel": "İptal",
+        "save": "Kaydet",
+        "close": "Kapat",
+        "continue": "Devam Et",
+        "reset": "Sıfırla",
+        "github": {
+            "button": {
+                "title": "Github",
+                "loading": "...",
+                "ready": "Hazır"
+            },
+            "dropdown": {
+                "star": {
+                    "title": "Depoyu Yıldızla",
+                    "description": "Desteğinizi gösterin",
+                    "badge": "Yıldızla"
+                },
+                "fork": {
+                    "title": "Depoyu Forkla",
+                    "description": "Kendi kopyanızı oluşturun",
+                    "badge": "Forkla"
+                },
+                "view": {
+                    "title": "Depoyu Görüntüle",
+                    "description": "Kaynak koduna göz atın",
+                    "badge": "Görüntüle"
+                }
+            }
+        },
+        "vercel": {
+            "button": {
+                "title": "Vercel'e Dağıt",
+                "ready": "Hazır"
+            },
+            "dropdown": {
+                "deploy": {
+                    "title": "Hızlı Dağıtım",
+                    "description": "Tek tıkla dağıtın",
+                    "badge": "Dağıt",
+                    "vercel-description": "🚀 Modern ve üretime hazır bir Next.js başlangıç projesi. TypeScript, i18n desteği ve otomatik araçlarla hızlı bir başlangıç sağlar."
+                },
+                "preview": {
+                    "title": "Demoyu Önizle",
+                    "description": "Canlı örneği görün",
+                    "badge": "Canlı"
+                },
+                "docs": {
+                    "title": "Belgeler",
+                    "description": "Dağıtımı öğrenin",
+                    "badge": "Belgeler"
+                }
+            }
+        }
+    },
+    "placeholders": {
+        "email": "merhaba@nitrokit.tr",
+        "password": "********"
+    },
+    "navigation": {
+        "home": "Ana Sayfa",
+        "about": "Hakkında",
+        "services": "Hizmetler",
+        "pricing": "Fiyatlar",
+        "faq": "S.S.S.",
+        "contact": "İletişim",
+        "features": "Özellikler",
+        "blog": "Blog",
+        "docs": "Belgeler",
+        "getting_started": "Başlarken",
+        "community": "Topluluk",
+        "storybook": "Storybook",
+        "products": "Ürünler",
+        "support": "Destek"
+    },
+    "errors": {
+        "general": "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin.",
+        "rate_limit_unavailable": "Hız limiti servisi şu anda kullanılamıyor. Lütfen tekrar deneyin.",
+        "rate_limit_exceeded": "Çok fazla istek yaptınız. Lütfen biraz bekleyip tekrar deneyin."
+    },
+    "cookies": {
+        "banner": {
+            "title": "Çerezleri kullanıyoruz",
+            "description": "Tarama deneyiminizi geliştirmek, kişiselleştirilmiş içerik sunmak ve trafiğimizi analiz etmek için çerezleri kullanıyoruz.",
+            "learnMore": "Daha fazla bilgi edin",
+            "accept": "Tümünü Kabul Et",
+            "reject": "Tümünü Reddet",
+            "settings": "Çerez Ayarları"
+        },
+        "settings": {
+            "title": "Çerez Tercihleri",
+            "description": "Hangi çerezleri kabul etmek istediğinizi seçin. Bu ayarları istediğiniz zaman değiştirebilirsiniz.",
+            "save": "Tercihleri Kaydet",
+            "rejectAll": "Tümünü Reddet"
+        },
+        "categories": {
+            "necessary": {
+                "title": "Gerekli Çerezler",
+                "description": "Bu çerezler web sitesinin düzgün çalışması için gereklidir. Devre dışı bırakılamazlar."
+            },
+            "analytics": {
+                "title": "Analitik Çerezleri",
+                "description": "Bu çerezler, bilgileri anonim olarak toplayıp raporlayarak ziyaretçilerin web sitemizle nasıl etkileşim kurduğunu anlamamıza yardımcı olur."
+            },
+            "marketing": {
+                "title": "Pazarlama Çerezleri",
+                "description": "Bu çerezler, size ve ilgi alanlarınıza daha uygun reklamlar sunmak için kullanılır."
+            },
+            "functional": {
+                "title": "İşlevsel Çerezler",
+                "description": "Bu çerezler, tercihlerinizin hatırlanması gibi gelişmiş işlevsellik ve kişiselleştirme sağlar."
+            }
+        }
+    },
+    "newsletter": {
+        "title": "Bültenimize abone olun",
+        "description": "En son güncellemeleri, ipuçlarını ve fırsatları doğrudan gelen kutunuza alın.",
+        "emailPlaceholder": "E-posta adresinizi girin",
+        "sending": "Gönderiliyor...",
+        "thankYou": "Teşekkürler!",
+        "subscribe": "Abone Ol",
+        "success": "Abonelik başarılı. Onaylamak için e-postanızı kontrol edin.",
+        "unsubscribe": "İstediğiniz zaman abonelikten çıkabilirsiniz.",
+        "alreadySubscribed": "Bu e-posta zaten abone.",
+        "subscriptionConfirmation": "Haber Bülteni Aboneliği Onayı",
+        "confirmationLink": "Haber bültenimize abone olmak için şu linke tıklayın: ${confirmUrl}",
+        "confirmSuccess": "Aboneliğiniz başarıyla onaylandı!",
+        "confirmError": "Geçersiz veya süresi dolmuş bağlantı.",
+        "confirmDialogTitleSuccess": "Abonelik Onaylandı",
+        "confirmDialogTitleError": "Abonelik Onayı Hatası",
+        "confirmDialogTitleLoading": "Abonelik Onaylanıyor...",
+        "confirmDialogDescLoading": "Lütfen bekleyin.",
+        "invalidToken": "Geçersiz onay belirteci."
+    },
+    "privacyPolicy": {
+        "title": "Gizlilik Politikası",
+        "description": "Bu Gizlilik Politikası, Nitrokit mobil uygulaması ve/veya web sitesi aracılığıyla kişisel verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar. Hizmetlerimizi kullanarak bu politikayı kabul etmiş olursunuz.",
+        "sections": {
+            "whatData": {
+                "title": "Hangi Verileri Topluyoruz?",
+                "content": "Bizimle iletişime geçtiğinizde veya hizmetlerimizi kullandığınızda, sağladığınız bilgileri toplarız. Bu bilgiler, adınız, e-posta adresiniz ve iletişim formları veya destek talepleri aracılığıyla bize ilettiğiniz diğer tüm verileri içerebilir."
+            },
+            "howWeUse": {
+                "title": "Verilerinizi Nasıl Kullanıyoruz?",
+                "content": "Topladığımız kişisel verileri aşağıdaki amaçlarla kullanırız:\n- Sorularınıza yanıt vermek ve destek sağlamak.\n- Hizmetlerimiz hakkında sizi bilgilendirmek ve güncellemeler göndermek.\n- Kullanıcı deneyimini geliştirmek ve hizmetlerimizi kişiselleştirmek."
+            },
+            "dataSharing": {
+                "title": "Veri Paylaşımı ve Koruma",
+                "content": "Kişisel verilerinizin yetkisiz erişim, değiştirme veya sızıntıdan korunması için makul ve uygun güvenlik önlemleri alırız. Verilerinizi, ilgili yasalara uygun olarak güvenli sunucularda saklarız. Verileriniz, yasal zorunluluklar veya rızanız dışında üçüncü taraflarla paylaşılmaz."
+            },
+            "contactInfo": {
+                "title": "İletişim Bilgileri",
+                "content": "Bu Gizlilik Politikası ile ilgili herhangi bir sorunuz varsa, lütfen bizimle hello@nitrokit.tr adresi üzerinden iletişime geçin."
+            }
+        }
+    },
+    "terms": {
+        "title": "Kullanım Şartları ve Koşulları",
+        "description": "Bu Kullanım Şartları ve Koşulları (\"Şartlar\"), **Nitrokit** mobil uygulaması ve/veya web sitesi (https://nitrokit.tr) aracılığıyla sunulan hizmetleri (\"Hizmetler\") kullanımınızı düzenler. Uygulamayı indirerek, kurarak veya kullanarak bu Şartları kabul etmiş olursunuz. Bu Şartları kabul etmiyorsanız, uygulamayı kullanmayın.",
+        "sections": {
+            "descriptionOfServices": {
+                "title": "Hizmetlerin Tanımı",
+                "content": "Nitrokit, Next.js tabanlı projeler için bir başlangıç kiti ve geliştirme ortamı sağlayarak kullanıcıların hızlıca uygulama geliştirmelerini amaçlar. Hizmetlerimiz, proje şablonları, entegrasyon araçları ve geliştirme dokümantasyonu sunmaktadır."
+            },
+            "userAccounts": {
+                "title": "Kullanıcı Hesapları",
+                "content": "Hizmetlerin bazı özelliklerini kullanabilmek için bir hesap oluşturmanız gerekebilir. Hesap oluştururken doğru, güncel ve eksiksiz bilgi vermeyi kabul edersiniz. Hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır. Hesabınızda yetkisiz bir kullanım fark ettiğinizde derhal bizi bilgilendirmelisiniz."
+            },
+            "userConduct": {
+                "title": "Kullanıcı Davranışları",
+                "content": [
+                    "Uygulamayı kullanırken yasalara uygun davranmayı ve başkalarının haklarına saygı göstermeyi kabul edersiniz. Aşağıdaki eylemler yasaktır:",
+                    "Yasa dışı veya yetkisiz herhangi bir amaçla uygulamayı kullanmak.",
+                    "Uygulamanın veya sunucuların güvenliğini ihlal etmek veya kesintiye uğratmak.",
+                    "Diğer kullanıcıların kişisel bilgilerini toplamak veya saklamak.",
+                    "Virüs, truva atı veya diğer kötü amaçlı kodları iletmek.",
+                    "Uygulamanın düzgün çalışmasını engelleyecek eylemlerde bulunmak."
+                ]
+            },
+            "intellectualPropertyRights": {
+                "title": "Fikri Mülkiyet Hakları",
+                "content": "Uygulamanın ve Hizmetlerin tüm fikri mülkiyet hakları Nitrokit veya lisans verenlerine aittir. Bu Şartlar size uygulamayı kullanma lisansı verir, ancak fikri mülkiyet haklarımızı devretmez. Uygulamamızın içeriğini kopyalayamaz, değiştiremez, dağıtamaz veya tersine mühendislik yapamazsınız."
+            },
+            "privacy": {
+                "title": "Gizlilik",
+                "content": "Gizliliğiniz bizim için önemlidir. Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğu hakkında bilgi almak için **Gizlilik Politikamızı** (<policyUrl>https://nitrokit.tr/privacy</policyUrl>) okuyun. Uygulamayı kullanarak Gizlilik Politikamızdaki uygulamaları kabul etmiş olursunuz."
+            },
+            "thirdPartyLinks": {
+                "title": "Üçüncü Taraf Bağlantıları",
+                "content": "Uygulama, üçüncü taraf web sitelerine veya hizmetlere bağlantılar içerebilir. Bu bağlantılar sadece sizin kolaylığınız için sağlanmıştır. Üçüncü taraf sitelerin içeriği, gizlilik uygulamaları veya politikaları üzerinde herhangi bir kontrolümüz yoktur ve bunlardan sorumlu değiliz."
+            },
+            "disclaimerOfWarranties": {
+                "title": "Sorumluluğun Reddi",
+                "content": "Hizmetlerimiz \"olduğu gibi\" ve \"mevcut olduğu şekilde\" sunulmaktadır. Uygulamanın kesintisiz, hatasız veya güvenli olacağına dair herhangi bir garanti vermeyiz. Uygulamanın kullanımından doğacak riskler tamamen size aittir."
+            },
+            "limitationOfLiability": {
+                "title": "Sorumluluğun Sınırlandırılması",
+                "content": "Yasaların izin verdiği ölçüde, Nitrokit, uygulamayı kullanımınızdan veya kullanamamanızdan kaynaklanan hiçbir doğrudan, dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu olmayacaktır."
+            },
+            "changesToTerms": {
+                "title": "Şartların Değiştirilmesi",
+                "content": "Bu Şartları dilediğimiz zaman değiştirme hakkımızı saklı tutarız. Değişiklikler uygulamada yayınlandığında yürürlüğe girer. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, revize edilmiş Şartları kabul ettiğiniz anlamına gelir."
+            },
+            "contact": {
+                "title": "İletişim",
+                "content": "Bu Şartlar hakkında herhangi bir sorunuz varsa, lütfen bizimle <email>hello@nitrokit.tr</email> adresinden iletişime geçin."
+            }
+        }
+    },
+    "notFound": {
+        "title": "Sayfa Bulunamadı",
+        "description": "Hata! Aradığınız sayfa mevcut değil.",
+        "returnHome": "Ana Sayfaya Dön"
+    }
+}

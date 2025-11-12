@@ -1,0 +1,73 @@
+'use client';
+
+import { Globe } from 'lucide-react';
+import Image from 'next/image';
+import { Suspense, useEffect, useState } from 'react';
+
+import { SmallLoading } from '@/components/shared';
+import { Button, Popover, PopoverContent, PopoverTrigger } from '@/components/ui';
+import { Locale } from '@/constants';
+import { usePathname, useRouter } from '@/lib/i18n/navigation';
+import { LOCALES_WITH_FLAG } from '@/lib/utils';
+
+type PopoverDirection = 'top' | 'right' | 'bottom' | 'left';
+
+interface LocaleSwitcherProps {
+    side?: PopoverDirection;
+}
+
+export const LocaleSwitcher = ({ side = 'bottom' }: LocaleSwitcherProps) => {
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const [open, setOpen] = useState(false);
+    const [mounted, setMounted] = useState<boolean>(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const handleChange = (value: Locale) => {
+        router.push(pathname, { locale: value });
+        router.refresh();
+    };
+
+    if (!mounted) {
+        return <SmallLoading />;
+    }
+
+    return (
+        <Suspense fallback={<SmallLoading />}>
+            <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild>
+                    <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full">
+                        <Globe className="h-4 w-4" />
+                    </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-35 p-1 shadow-xs" side={side}>
+                    {LOCALES_WITH_FLAG.map((LOCALE) => (
+                        <div
+                            key={LOCALE.id}
+                            className="flex cursor-pointer flex-row items-center gap-3 p-1 hover:bg-gray-100 dark:hover:bg-gray-700"
+                            onClick={() => {
+                                handleChange(LOCALE.id);
+                                setOpen(false);
+                            }}
+                        >
+                            <div className="flex">
+                                <Image
+                                    src={LOCALE.flag}
+                                    width={16}
+                                    height={16}
+                                    alt={LOCALE.name}
+                                    className="w-4"
+                                />
+                            </div>
+                            <div className="text-sm">{LOCALE.name}</div>
+                        </div>
+                    ))}
+                </PopoverContent>
+            </Popover>
+        </Suspense>
+    );
+};

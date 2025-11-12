@@ -1,0 +1,24 @@
+{
+    "title": "İletişim",
+    "description": "Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz.",
+    "pageHero": {
+        "title": "Bize ulaşın",
+        "subtitle": "İletişim",
+        "description": "Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz."
+    },
+    "name": "Adınız",
+    "email": "E-posta Adresiniz",
+    "message": "Mesajınız",
+    "send": "Gönder",
+    "message_sent": "Mesaj başarıyla gönderildi!",
+    "message_sent_description": "En kısa sürede sizinle iletişime geçilecektir.",
+    "form_heading": "Bize bir mesaj gönderin",
+    "form_description": "Aşağıdaki formu doldurun, en kısa süre içinde size geri döneceğiz.",
+    "privacy_policy_agreement": "Bu formu göndererek, <a>Gizlilik Politikamızı</a> kabul etmiş olursunuz",
+    "phone": "Telefon",
+    "business_hours": "Çalışma Saatleri",
+    "address": "Adres",
+    "get_directions": "Adres Tarifi",
+    "call_now": "Şimdi Ara",
+    "send_email": "E-posta Gönder"
+}

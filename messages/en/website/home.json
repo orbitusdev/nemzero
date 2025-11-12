@@ -1,20 +1,20 @@
 {
     "title": "",
-    "description": "Welcome to our website!",
+    "description": "",
     "banner": {
         "badge": "New",
-        "text": "{version} is out! See what's new"
+        "text": "{version} is out! Check out what's new"
     },
     "hero": {
         "titles": {
-            "title1": "Build Modern Apps<br></br>Faster with Nitrokit",
-            "title2": "Create Amazing Apps<br></br>with Nitrokit"
+            "title1": "Next-Generation Acrylic Insulation Paints",
+            "title2": "Revolution in Water Insulation: An End to Stains and Leaks!"
         },
         "description": {
-            "description1": "Easily build amazing apps with Nitrokit. Turn your ideas into reality in no time.",
-            "description2": "With Nitrokit, design, test, and launch your projects in minutes — effortlessly.",
-            "description3": "A powerful platform that saves time and boosts your impact: Nitrokit. Unleash your creativity.",
-            "description4": "Accelerate the journey from idea to live product with Nitrokit."
+            "description1": "Protect your building for many years with Next-Generation Hybrid Acrylic Insulation Paints. Apply easily and get an instant solution.",
+            "description2": "NemZero's special formula provides 100% waterproofing on all wet floors, from terraces to facades. Discover it now.",
+            "description3": "Special prices on high-performance NemZero products! Get construction-quality, easy-to-apply water insulation solutions now.",
+            "description4": ""
         }
     },
     "stats": {
@@ -33,12 +33,12 @@
     },
     "testimonials": {
         "slogan": "Powering the next generation of startups",
-        "title": "Testimonials",
-        "subtitle": "What our Client Say",
+        "title": "Customer Testimonials",
+        "subtitle": "Loved by Thousands of Users",
         "description": "Discover why Nitrokit is so loved and experience its transformative power for your business by joining today."
     },
     "technologies": {
-        "title": "Powered by Modern Technologies"
+        "title": "Quality Certificates"
     },
     "cta": {
         "title": "Ready to get started?",

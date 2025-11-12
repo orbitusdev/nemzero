@@ -8,10 +8,11 @@ const contactDetails = [
     {
         icon: MapPin,
         label: 'address',
-        value: 'Maslak Mahallesi, Büyükdere Cd. No:123',
-        subValue: '34398 Şişli/İstanbul, Turkey',
+        value: 'Kaynarca Mahallesi Adnan Kahveci Caddesi No:3',
+        subValue: 'Pendik/İstanbul, Turkey',
         action: () => {
-            const url = 'https://www.google.com/maps/search/?api=1&query=41.1064,29.0236';
+            const url =
+                'https://www.google.com/maps/search/?api=1&query=40.877408612766544,29.254406119296178';
             window.open(url, '_blank');
         },
         actionLabel: 'get_directions'
@@ -19,22 +20,22 @@ const contactDetails = [
     {
         icon: Phone,
         label: 'phone',
-        value: '+90 216 123 4567',
-        action: () => window.open('tel:+902161234567'),
+        value: '+90 216 471 7581',
+        action: () => window.open('tel:+902164717581'),
         actionLabel: 'call_now'
     },
     {
         icon: Mail,
         label: 'email',
-        value: 'hello@nitrokit.tr',
-        action: () => window.open('mailto:hello@nitrokit.tr'),
+        value: 'info@nemzero.com.tr',
+        action: () => window.open('mailto:info@nemzero.com.tr'),
         actionLabel: 'send_email'
     },
     {
         icon: Clock,
         label: 'business_hours',
-        value: 'Monday - Friday',
-        subValue: '9:00 AM - 6:00 PM (GMT+3)'
+        value: 'Pazartesi - Cumartesi',
+        subValue: '9:00 - 18:00 (GMT+3)'
     }
 ];
 
@@ -49,7 +50,7 @@ export const ContactInfo = () => {
                     return (
                         <div key={index} className="group">
                             <div className="flex items-start gap-4">
-                                <div className="mt-1 flex-shrink-0">
+                                <div className="mt-1 shrink-0">
                                     <div className="bg-primary/10 group-hover:bg-primary/20 flex h-10 w-10 items-center justify-center rounded-lg transition-colors">
                                         <Icon className="text-primary h-5 w-5" />
                                     </div>

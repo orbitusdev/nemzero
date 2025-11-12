@@ -1,17 +1,17 @@
 {
-    "title": "Nitrokit - Next.js Uygulamaları için Nihai Başlangıç Kiti",
-    "description": "Nitrokit ile Next.js projelerinize hızlı bir başlangıç yapın; kimlik doğrulama, uluslararasılaştırma ve daha fazlasını içeren kapsamlı bir başlangıç kiti.",
-    "name": "Nitrokit Next.js",
-    "shortName": "Nitrokit",
-    "welcome": "Nitrokit'e Hoş Geldiniz!",
+    "title": "Nemzero İzolasyon Boyası",
+    "description": "Yeni nesil akrilik su yalıtım boyaları. Nem, rutubet ve su sızıntılarına kesin çözüm. Teras, cephe ve ıslak zeminler için en güçlü izolasyon ürünleri.",
+    "name": "Nemzero",
+    "shortName": "Nemzero",
+    "welcome": "Nemzero İzolasyon Boyası",
     "loading": "Yükleniyor...",
     "allRightsReserved": "Tüm hakları saklıdır.",
     "contactUs": "Bize Ulaşın",
     "metadata": {
-        "applicationName": "Nitrokit Next.js",
-        "title": "Nitrokit - Yıldırım Hızında Next.js Başlangıç Kiti",
-        "description": "Nitrokit'in kapsamlı Next.js başlangıç kiti ile modern web uygulamaları geliştirin. TypeScript, Tailwind CSS, kimlik doğrulama ve daha fazlasını içerir.",
-        "author": "Nitrokit Ekibi"
+        "applicationName": "Nemzero",
+        "title": "Nemzero İzolasyon Boyası",
+        "description": "Yeni nesil akrilik su yalıtım boyaları. Nem, rutubet ve su sızıntılarına kesin çözüm. Teras, cephe ve ıslak zeminler için en güçlü izolasyon ürünleri.",
+        "author": "Nitrokit"
     },
     "buttons": {
         "email": "E-posta",

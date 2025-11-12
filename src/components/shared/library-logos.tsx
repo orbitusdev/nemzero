@@ -4,92 +4,44 @@ import React from 'react';
 
 const logos = [
     {
-        darkSrc: '/images/brands/nextjs-white.svg',
-        lightSrc: '/images/brands/nextjs-black.svg',
-        alt: 'Next.js',
-        width: 150,
-        height: 30,
-        href: 'https://nextjs.org/'
+        darkSrc: '/images/certification/iso.png',
+        lightSrc: '/images/certification/iso.png',
+        alt: 'ISO',
+        width: 120,
+        height: 80,
+        href: ''
     },
     {
-        darkSrc: '/images/brands/typescript.svg',
-        lightSrc: '/images/brands/typescript.svg',
+        darkSrc: '/images/certification/tse.png',
+        lightSrc: '/images/certification/tse.png',
         alt: 'Typescript',
-        width: 36,
-        height: 36,
-        href: 'https://www.typescriptlang.org/'
+        width: 120,
+        height: 80,
+        href: ''
     },
     {
-        darkSrc: '/images/brands/tailwindcss.svg',
-        lightSrc: '/images/brands/tailwindcss.svg',
+        darkSrc: '/images/certification/ce.png',
+        lightSrc: '/images/certification/ce.png',
         alt: 'Tailwind CSS',
-        width: 50,
-        height: 30,
-        href: 'https://tailwindcss.com/'
-    },
-    {
-        darkSrc: '/images/brands/prisma-white.svg',
-        lightSrc: '/images/brands/prisma-black.svg',
-        alt: 'Prisma',
         width: 100,
-        height: 30,
-        href: 'https://www.prisma.io/'
+        height: 80,
+        href: ''
     },
     {
-        darkSrc: '/images/brands/radix-white.svg',
-        lightSrc: '/images/brands/radix-black.svg',
+        darkSrc: '/images/certification/tubitak.png',
+        lightSrc: '/images/certification/tubitak.png',
+        alt: 'Prisma',
+        width: 70,
+        height: 70,
+        href: ''
+    },
+    {
+        darkSrc: '/images/certification/mapfre.png',
+        lightSrc: '/images/certification/mapfre.png',
         alt: 'Radix-UI',
-        width: 95,
-        height: 30,
-        href: 'https://www.radix-ui.com/'
-    },
-    {
-        darkSrc: '/images/brands/next-intl-white.svg',
-        lightSrc: '/images/brands/next-intl-black.svg',
-        alt: 'Next-Intl',
-        width: 130,
-        height: 30,
-        href: 'https://next-intl.dev/'
-    },
-    {
-        darkSrc: '/images/brands/react-white.svg',
-        lightSrc: '/images/brands/react-black.svg',
-        alt: 'React',
-        width: 33,
-        height: 30,
-        href: 'https://react.dev/'
-    },
-    {
-        darkSrc: '/images/brands/authjs.svg',
-        lightSrc: '/images/brands/authjs.svg',
-        alt: 'Auth.js',
-        width: 27,
-        height: 30,
-        href: 'https://authjs.dev/'
-    },
-    {
-        darkSrc: '/images/brands/resend-white.svg',
-        lightSrc: '/images/brands/resend-black.svg',
-        alt: 'Resend',
-        width: 30,
-        height: 30,
-        href: 'https://resend.com/'
-    },
-    {
-        darkSrc: '/images/brands/lucide-white.svg',
-        lightSrc: '/images/brands/lucide-black.svg',
-        alt: 'Lucide-react',
-        width: 30,
-        height: 30,
-        href: 'https://lucide.dev/'
-    },
-    {
-        darkSrc: '/images/brands/zod.svg',
-        lightSrc: '/images/brands/zod.svg',
-        alt: 'Zod',
-        width: 30,
-        height: 30,
-        href: 'https://zod.dev/'
+        width: 120,
+        height: 80,
+        href: ''
     }
 ];
 
@@ -116,7 +68,7 @@ function DefaultLibraryLogosView() {
                             .map((_, i) => (
                                 <div
                                     key={i}
-                                    className="animate-marquee group-hover:paused flex shrink-0 flex-row justify-around gap-(--gap)"
+                                    className="animate-marquee group-hover:paused flex flex-row justify-around gap-(--gap)"
                                 >
                                     {logos.map((logo, idx) => (
                                         <div
@@ -149,28 +101,26 @@ function DefaultLibraryLogosView() {
 function CompactLibraryLogosView() {
     const t = useTranslations('home');
     return (
-        <section className="py-6">
-            <div className="container mx-auto px-4">
-                <div className="mb-12 text-center" style={{ opacity: 1, transform: 'none' }}>
-                    <p className="text-muted-foreground mb-6 text-xs font-semibold tracking-wider uppercase">
-                        {t('technologies.title')}
-                    </p>
-                </div>
-                <div className="flex flex-wrap justify-center gap-12">
-                    {logos.map((logo) => (
-                        <ThemedImage
-                            key={logo.alt}
-                            darkSrc={logo.darkSrc}
-                            lightSrc={logo.lightSrc}
-                            alt={logo.alt}
-                            width={logo.width / 1.2}
-                            height={logo.height / 1.2}
-                            href={logo.href}
-                            style={{ width: logo.width / 1.2, height: 'auto' }}
-                            className="opacity-70 transition hover:opacity-100"
-                        />
-                    ))}
-                </div>
+        <section className="container mx-auto flex flex-col items-center justify-center px-4">
+            <div className="mb-3 text-center" style={{ opacity: 1, transform: 'none' }}>
+                <p className="mb-6 text-lg font-semibold tracking-wider text-black uppercase">
+                    {t('technologies.title')}
+                </p>
+            </div>
+            <div className="grid max-w-5xl grid-cols-5 items-center justify-center gap-12">
+                {logos.map((logo) => (
+                    <ThemedImage
+                        key={logo.alt}
+                        darkSrc={logo.darkSrc}
+                        lightSrc={logo.lightSrc}
+                        alt={logo.alt}
+                        width={logo.width / 1.2}
+                        height={logo.height / 1.2}
+                        href={logo.href}
+                        style={{ width: logo.width / 1.2, height: 'auto' }}
+                        className="opacity-100 transition hover:opacity-70"
+                    />
+                ))}
             </div>
         </section>
     );

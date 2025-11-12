@@ -15,8 +15,6 @@ interface NavLink {
 
 const NAV_LINKS: readonly NavLink[] = [
     { name: 'common.navigation.home', description: '', path: '/', icon: IconHome },
-    { name: 'common.navigation.about', description: '', path: '/about/', icon: IconInfo },
-    { name: 'common.navigation.pricing', description: '', path: '/pricing/', icon: IconCreditCard },
     {
         name: 'common.navigation.contact',
         description: '',
@@ -33,31 +31,16 @@ const FOOTER_LINKS = {
             name: 'common.navigation.docs',
             href: '#',
             noLocale: true
-        },
-        { name: 'common.navigation.storybook', href: '#', noLocale: true }
+        }
     ],
     SECTION2: [
         { name: 'common.navigation.getting_started', href: '#', noLocale: false },
         { name: 'common.navigation.faq', href: '#', noLocale: false },
-        {
-            name: 'common.navigation.community',
-            href: 'https://github.com/mustafagenc/nitrokit/discussions',
-            noLocale: true
-        },
         { name: 'common.navigation.contact', href: '/contact', noLocale: false }
     ]
 };
 
-const PUBLIC_ROUTES = [
-    NAV_LINKS.map((link) => link.path),
-    '/faq',
-    '/privacy',
-    '/terms',
-    '/login',
-    '/error',
-    '/verify-request',
-    '/register'
-];
+const PUBLIC_ROUTES = [NAV_LINKS.map((link) => link.path), '/privacy', '/terms'];
 
 const ROUTES = NAV_LINKS.map((link) => link.path.replace(/\//g, '')).filter(Boolean);
 

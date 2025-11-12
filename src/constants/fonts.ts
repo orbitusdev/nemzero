@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import { Inter } from 'next/font/google';
 
 const lexend = localFont({
     variable: '--font-lexend',
@@ -66,4 +67,10 @@ const montserrat = localFont({
     preload: true
 });
 
-export { lexend, montserrat };
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+    display: 'swap'
+});
+
+export { lexend, montserrat, inter };

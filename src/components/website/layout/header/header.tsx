@@ -4,12 +4,8 @@ import { Navbar } from '@/components/website/navigation';
 import { Logo } from '@/components/shared/';
 import { useStickyNavbar } from '@/hooks';
 import { CompactLocaleSwitcher } from '@/components/switchers';
-import { useSession } from 'next-auth/react';
-import { UserMenu } from '@/components/app';
 
 export function Header() {
-    const { data: session, status } = useSession();
-    console.log('Session-Status', session, status);
     const sticky = useStickyNavbar();
     return (
         <header
@@ -28,7 +24,6 @@ export function Header() {
                 </div>
                 <div className="flex grow flex-row items-center justify-end gap-2 lg:grow-0">
                     <CompactLocaleSwitcher />
-                    <UserMenu />
                 </div>
             </div>
         </header>

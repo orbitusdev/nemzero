@@ -1,34 +1,14 @@
-import {
-    Facebook as IconFacebook,
-    Instagram as IconInstagram,
-    Linkedin as IconLinkedin,
-    Github as IconGithub
-} from 'lucide-react';
+import { Instagram as IconInstagram } from 'lucide-react';
 
 const GITHUB_URL = 'https://github.com/nitrokit/nitrokit-nextjs';
 
-const PUBLIC_EMAIL = 'hello@nitrokit.tr';
+const PUBLIC_EMAIL = 'info@nemzero.com.tr';
 
 const SOCIAL_LINKS = [
     {
         name: 'instagram',
-        url: 'https://www.instagram.com/nitrokittr',
+        url: 'https://www.instagram.com/nemzero.com.tr',
         icon: IconInstagram
-    },
-    {
-        name: 'facebook',
-        url: 'https://www.facebook.com/nitrokittr',
-        icon: IconFacebook
-    },
-    {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/company/nitrokit',
-        icon: IconLinkedin
-    },
-    {
-        name: 'github',
-        url: 'https://github.com/nitrokit',
-        icon: IconGithub
     }
 ];
 

@@ -3,20 +3,32 @@
 import { cn } from '@/lib/utils';
 
 interface BackgroundPatternsProps {
-    variant?: 'default' | 'geometric' | 'dots' | 'waves' | 'grid' | 'stars' | 'circles' | 'network';
+    variant?:
+        | 'default'
+        | 'geometric'
+        | 'dots'
+        | 'waves'
+        | 'grid'
+        | 'stars'
+        | 'circles'
+        | 'network'
+        | 'water'
+        | 'image-overlay';
     className?: string;
     animated?: boolean;
+    backgroundImageUrl?: string;
 }
 
 export function BackgroundPatterns({
     variant = 'default',
     className,
-    animated = true
+    animated = true,
+    backgroundImageUrl
 }: BackgroundPatternsProps) {
+    console.log(variant);
     const patterns = {
         default: (
             <>
-                {/* Light mode */}
                 <div className="absolute inset-0 overflow-hidden dark:hidden">
                     <div
                         className="absolute inset-0 opacity-60"
@@ -50,7 +62,6 @@ export function BackgroundPatterns({
                         </>
                     )}
                 </div>
-                {/* Dark mode */}
                 <div className="absolute inset-0 hidden overflow-hidden dark:block">
                     <div
                         className="absolute inset-0 opacity-40"
@@ -558,6 +569,121 @@ export function BackgroundPatterns({
                     )}
                 </div>
             </>
+        ),
+        water: (
+            <>
+                <div className="absolute inset-0 overflow-hidden dark:hidden">
+                    <div className="absolute top-1/4 -left-64 h-96 w-96 rounded-full border border-blue-400/30 opacity-70" />
+                    <div className="absolute top-1/2 -right-80 h-80 w-80 rounded-full border border-cyan-400/25 opacity-60" />
+                    <div className="absolute top-10 right-20 h-4 w-4 rounded-full bg-blue-300 opacity-80" />
+                    <div className="absolute bottom-1/5 left-1/4 h-2 w-2 rounded-full bg-teal-300 opacity-70" />
+                    <div className="absolute top-0 left-0 h-40 w-40 bg-blue-200/50 opacity-50 blur-3xl" />
+                    <div className="absolute right-0 bottom-0 h-32 w-32 bg-cyan-200/40 opacity-40 blur-3xl" />
+                    {animated && (
+                        <>
+                            <div className="absolute top-1/2 left-1/2 h-4 w-4 animate-ping rounded-full bg-blue-400 opacity-60" />
+                            <div
+                                className="absolute top-1/4 right-1/4 h-3 w-3 animate-ping rounded-full bg-cyan-400 opacity-50"
+                                style={{ animationDelay: '1.5s' }}
+                            />
+                        </>
+                    )}
+                </div>
+
+                <div className="absolute inset-0 hidden overflow-hidden dark:block">
+                    <div className="absolute top-1/3 -left-80 h-100 w-100 rounded-full border border-cyan-500/20 opacity-60" />
+                    <div className="absolute top-1/4 -right-96 h-90 w-90 rounded-full border border-blue-500/15 opacity-50" />
+                    <div className="absolute top-20 right-40 h-5 w-5 rounded-full bg-cyan-400 opacity-70" />
+                    <div className="absolute bottom-1/4 left-1/3 h-3 w-3 rounded-full bg-teal-400 opacity-60" />
+                    <div className="absolute top-0 right-0 h-56 w-56 bg-blue-500/10 opacity-30 blur-3xl" />
+                    <div className="absolute bottom-0 left-0 h-48 w-48 bg-teal-500/8 opacity-25 blur-3xl" />
+                    {animated && (
+                        <>
+                            <div className="absolute top-1/3 left-1/3 h-6 w-6 animate-ping rounded-full bg-cyan-400 opacity-70" />
+                            <div
+                                className="absolute top-2/3 right-1/5 h-4 w-4 animate-ping rounded-full bg-blue-400 opacity-60"
+                                style={{ animationDelay: '2s' }}
+                            />
+                        </>
+                    )}
+                </div>
+            </>
+        ),
+        'image-overlay': (
+            <div className="absolute inset-0 overflow-hidden">
+                <div
+                    className="absolute inset-0 bg-cover bg-top"
+                    style={{
+                        backgroundImage: backgroundImageUrl ? `url(${backgroundImageUrl})` : 'none'
+                    }}
+                />
+
+                <div className="absolute inset-0 bg-white/60 dark:bg-gray-900/10" />
+
+                <div className="absolute inset-0 overflow-hidden dark:hidden">
+                    <div
+                        className="absolute inset-0 opacity-60"
+                        style={{
+                            backgroundImage: `
+                                linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px)
+                            `,
+                            backgroundSize: '50px 50px'
+                        }}
+                    />
+                    <div className="absolute top-10 -right-50 h-80 w-80 rounded-full bg-linear-to-br from-blue-200 to-indigo-300 opacity-80 blur-3xl" />
+                    <div className="absolute top-1/3 -left-32 h-64 w-64 rounded-full bg-linear-to-br from-emerald-200 to-teal-300 opacity-70 blur-3xl" />
+                    <div className="absolute right-1/4 bottom-20 h-48 w-48 rounded-full bg-linear-to-br from-purple-200 to-pink-300 opacity-60 blur-3xl" />
+                    <div className="absolute top-1/4 left-1/4 h-3 w-3 rotate-45 bg-blue-400 opacity-40" />
+                    <div className="absolute top-1/2 right-1/3 h-4 w-4 rotate-12 bg-emerald-400 opacity-45" />
+                    <div className="absolute bottom-1/3 left-1/2 h-2 w-2 rotate-45 bg-purple-400 opacity-35" />
+                    <div className="absolute top-32 right-1/2 h-1 w-16 bg-linear-to-r from-transparent via-blue-300/40 to-transparent" />
+                    <div className="absolute bottom-1/4 left-1/4 h-12 w-1 bg-linear-to-b from-transparent via-emerald-300/30 to-transparent" />
+                    {animated && (
+                        <>
+                            <div className="absolute top-1/5 right-1/5 h-2 w-2 animate-pulse rounded-full bg-blue-300 opacity-50" />
+                            <div
+                                className="absolute right-2/3 bottom-1/3 h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-300 opacity-40"
+                                style={{ animationDelay: '1.5s' }}
+                            />
+                            <div
+                                className="absolute top-2/3 left-1/5 h-1 w-1 animate-pulse rounded-full bg-purple-300 opacity-30"
+                                style={{ animationDelay: '3s' }}
+                            />
+                        </>
+                    )}
+                </div>
+                <div className="absolute inset-0 hidden overflow-hidden dark:block">
+                    <div
+                        className="absolute inset-0 opacity-40"
+                        style={{
+                            backgroundImage: `
+                                linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+                                linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px)
+                            `,
+                            backgroundSize: '60px 60px'
+                        }}
+                    />
+                    <div className="absolute top-22 -right-42 h-64 w-64 rounded-full bg-linear-to-br from-emerald-500/20 to-teal-500/20 blur-3xl" />
+                    <div className="absolute top-1/4 -left-24 h-48 w-48 rounded-full bg-linear-to-br from-blue-500/15 to-indigo-500/15 blur-3xl" />
+                    <div className="absolute right-1/3 bottom-32 h-56 w-56 rounded-full bg-linear-to-br from-purple-500/10 to-pink-500/10 blur-3xl" />
+                    {animated && (
+                        <>
+                            <div className="absolute top-1/3 left-1/4 h-1 w-1 animate-pulse bg-emerald-400 opacity-60" />
+                            <div
+                                className="absolute top-1/2 right-1/4 h-1.5 w-1.5 animate-pulse bg-blue-400 opacity-50"
+                                style={{ animationDelay: '1s' }}
+                            />
+                            <div
+                                className="absolute bottom-1/2 left-1/3 h-1 w-1 animate-pulse bg-purple-400 opacity-40"
+                                style={{ animationDelay: '2s' }}
+                            />
+                        </>
+                    )}
+                    <div className="absolute top-20 left-1/2 h-px w-32 bg-linear-to-r from-transparent via-emerald-500/30 to-transparent" />
+                    <div className="absolute right-1/4 bottom-40 h-24 w-px bg-linear-to-b from-transparent via-blue-500/20 to-transparent" />
+                </div>
+            </div>
         )
     };
 

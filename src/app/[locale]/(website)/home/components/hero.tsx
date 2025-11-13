@@ -26,11 +26,11 @@ export function Hero() {
                         <TextRotator
                             texts={titleArray}
                             interval={10000}
-                            className="mb-6 inline-block bg-linear-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text text-center text-6xl leading-19 font-bold text-transparent text-shadow-white/15 text-shadow-xs"
+                            className="mb-6 inline-block bg-linear-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text text-center text-6xl leading-19 font-bold text-transparent text-shadow-white/25 text-shadow-xs"
                         />
                     </div>
 
-                    <p className="mx-auto mb-12 w-full max-w-4xl rounded-4xl bg-white/10 p-10 text-xl leading-relaxed text-gray-600 text-shadow-2xs text-shadow-white/15 md:text-2xl dark:text-gray-800">
+                    <p className="mx-auto mb-12 w-full max-w-4xl rounded-4xl bg-white/10 p-10 text-xl leading-relaxed text-[#7A7672] text-shadow-2xs text-shadow-[#F3E0BD] md:text-2xl dark:text-gray-800">
                         <RandomText texts={descriptionArray} />
                     </p>
                 </div>

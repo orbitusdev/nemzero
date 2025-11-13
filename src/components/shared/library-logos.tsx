@@ -103,23 +103,27 @@ function CompactLibraryLogosView() {
     return (
         <section className="container mx-auto flex flex-col items-center justify-center px-4">
             <div className="mb-3 text-center" style={{ opacity: 1, transform: 'none' }}>
-                <p className="mb-6 text-lg font-semibold tracking-wider text-black uppercase">
+                <p className="mb-6 text-lg font-bold tracking-wider text-black">
                     {t('technologies.title')}
                 </p>
             </div>
             <div className="grid max-w-5xl grid-cols-5 items-center justify-center gap-12">
                 {logos.map((logo) => (
-                    <ThemedImage
+                    <div
                         key={logo.alt}
-                        darkSrc={logo.darkSrc}
-                        lightSrc={logo.lightSrc}
-                        alt={logo.alt}
-                        width={logo.width / 1.2}
-                        height={logo.height / 1.2}
-                        href={logo.href}
-                        style={{ width: logo.width / 1.2, height: 'auto' }}
-                        className="opacity-100 transition hover:opacity-70"
-                    />
+                        className="flex h-30 w-30 items-center justify-center rounded-sm bg-white shadow-2xs shadow-amber-50"
+                    >
+                        <ThemedImage
+                            darkSrc={logo.darkSrc}
+                            lightSrc={logo.lightSrc}
+                            alt={logo.alt}
+                            width={logo.width / 1.2}
+                            height={logo.height / 1.2}
+                            href={logo.href}
+                            style={{ width: logo.width / 1.2, height: 'auto' }}
+                            className="opacity-100 transition hover:opacity-70"
+                        />
+                    </div>
                 ))}
             </div>
         </section>

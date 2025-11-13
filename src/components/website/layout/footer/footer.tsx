@@ -3,8 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui';
 import { Heart, Palette } from 'lucide-react';
-import { CompactThemeSwitcher } from '@/components/switchers';
-import { DevelopedBy, Logo, Version } from '@/components/shared';
+import { DevelopedBy, Logo } from '@/components/shared';
 import { SOCIAL_LINKS, FOOTER_LINKS } from '@/constants';
 import { Separator } from '@radix-ui/themes';
 import { CompactNewsletter } from '@/components/website/newsletter';
@@ -75,10 +74,6 @@ export function Footer() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <CompactThemeSwitcher />
-                        <div className="bg-border h-4 w-px" />
-                        <Version />
-                        <div className="bg-border h-4 w-px" />
                         <DevelopedBy />
                     </div>
                 </section>

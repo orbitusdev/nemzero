@@ -1,22 +1,27 @@
-import { ROUTES } from '@/constants';
+import { LOCALES, ROUTES } from '@/constants';
 import { getBaseUrl } from '@/lib';
 
 import type { MetadataRoute } from 'next';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = getBaseUrl();
-    const lastModified = new Date('2025-05-18T00:00:00Z').toISOString();
 
-    const staticRoutes = ROUTES.map((route) => {
-        const normalizedRoute = `${route.replace(/^(?:\/)|(?:\/)$/g, '')}`;
-        return {
-            url: new URL(normalizedRoute.replace(/^\/|\/$/g, ''), baseUrl).toString(),
-            lastModified: lastModified
-        };
+    const staticRoutes = ROUTES.flatMap((route) => {
+        return LOCALES.map((locale) => {
+            const alternates: { hreflang: string; href: string }[] = LOCALES.map((altLocale) => ({
+                hreflang: altLocale,
+                href: `${baseUrl}/${altLocale}${route === '/' ? '' : `/${route.replace(/^\//, '')}`}`
+            }));
+
+            return {
+                url: `${baseUrl}/${locale}${route === '/' ? '' : `/${route.replace(/^\//, '')}`}`,
+                lastModified: new Date().toISOString(),
+                alternates: {
+                    languages: Object.fromEntries(alternates.map((alt) => [alt.hreflang, alt.href]))
+                }
+            };
+        });
     });
 
-    //ToDo:
-    await Promise.all(staticRoutes.map(async () => {}));
-
-    return [...staticRoutes];
+    return staticRoutes;
 }

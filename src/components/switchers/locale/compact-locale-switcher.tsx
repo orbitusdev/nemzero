@@ -16,7 +16,6 @@ export const CompactLocaleSwitcher = () => {
     const currentLocale = useLocale();
 
     const [desktopOpen, setDesktopOpen] = useState(false);
-    const [mobileOpen, setMobileOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -26,7 +25,6 @@ export const CompactLocaleSwitcher = () => {
     const handleLocaleChange = (locale: Locale) => {
         router.push(pathname, { locale });
         setDesktopOpen(false);
-        setMobileOpen(false);
     };
 
     const getCurrentLocale = () => {
@@ -43,13 +41,13 @@ export const CompactLocaleSwitcher = () => {
 
     return (
         <Suspense fallback={<SmallLoading />}>
-            <div className="hidden sm:block">
+            <div>
                 <Popover open={desktopOpen} onOpenChange={setDesktopOpen}>
                     <PopoverTrigger asChild>
                         <Button
                             variant="ghost"
                             size="sm"
-                            className="border-border/0 hover:bg-accent/30 h-8 gap-2 rounded-lg border bg-transparent px-1 pl-2 transition-all duration-200"
+                            className="border-border/0 h-8 gap-2 rounded-lg border bg-none px-1 pl-2 transition-all duration-200 hover:bg-white"
                         >
                             <Image
                                 src={currentLocaleData.flag}
@@ -63,7 +61,7 @@ export const CompactLocaleSwitcher = () => {
                             <ChevronDown size={10} className="opacity-60" />
                         </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-30 p-1">
+                    <PopoverContent className="mr-3 w-30 p-1">
                         <div className="space-y-0.5">
                             {LOCALES_WITH_FLAG.map((LOCALE) => (
                                 <Button
@@ -72,10 +70,10 @@ export const CompactLocaleSwitcher = () => {
                                     size="sm"
                                     onClick={() => handleLocaleChange(LOCALE.id)}
                                     className={cn(
-                                        'h-auto w-full justify-start gap-2 p-1 transition-colors',
+                                        'h-auto w-full justify-start gap-2 rounded-xs px-2 py-0.5 text-amber-900 transition-colors',
                                         currentLocale === LOCALE.id
-                                            ? 'bg-accent text-accent-foreground'
-                                            : 'hover:bg-accent hover:text-accent-foreground'
+                                            ? 'bg-orange-200 hover:bg-orange-300 hover:text-white'
+                                            : 'hover:bg-orange-100 hover:text-amber-600'
                                     )}
                                 >
                                     <Image
@@ -84,58 +82,11 @@ export const CompactLocaleSwitcher = () => {
                                         height={16}
                                         alt={LOCALE.name}
                                     />
-                                    <span className="flex-1 text-left text-sm">{LOCALE.name}</span>
+                                    <span className="flex-1 text-left text-xs font-normal">
+                                        {LOCALE.name}
+                                    </span>
                                     {currentLocale === LOCALE.id && (
-                                        <Check size={14} className="text-primary ml-auto" />
-                                    )}
-                                </Button>
-                            ))}
-                        </div>
-                    </PopoverContent>
-                </Popover>
-            </div>
-            <div className="sm:hidden">
-                <Popover open={mobileOpen} onOpenChange={setMobileOpen}>
-                    <PopoverTrigger asChild>
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-7 w-7 rounded-lg p-0 transition-all duration-200"
-                        >
-                            <div className="relative">
-                                <Image
-                                    src={currentLocaleData.flag}
-                                    width={16}
-                                    height={16}
-                                    alt={currentLocaleData.name}
-                                />
-                            </div>
-                        </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="min-w-sm border-2 border-blue-200 p-1">
-                        <div className="space-y-0.5">
-                            {LOCALES_WITH_FLAG.map((LOCALE) => (
-                                <Button
-                                    key={LOCALE.id}
-                                    variant="ghost"
-                                    size="sm"
-                                    onClick={() => handleLocaleChange(LOCALE.id)}
-                                    className={cn(
-                                        'h-auto w-full justify-start gap-1 p-1 transition-colors',
-                                        currentLocale === LOCALE.id
-                                            ? 'bg-accent text-accent-foreground'
-                                            : 'hover:bg-accent hover:text-accent-foreground'
-                                    )}
-                                >
-                                    <Image
-                                        src={LOCALE.flag}
-                                        width={14}
-                                        height={14}
-                                        alt={LOCALE.name}
-                                    />
-                                    <span className="flex-1 text-left text-xs">{LOCALE.name}</span>
-                                    {currentLocale === LOCALE.id && (
-                                        <Check size={12} className="text-primary ml-auto" />
+                                        <Check size={14} className="ml-auto text-rose-300" />
                                     )}
                                 </Button>
                             ))}

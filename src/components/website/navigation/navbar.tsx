@@ -12,14 +12,13 @@ export function Navbar() {
     const pathname = usePathname();
     const isActive = (href: string) => pathname === href;
     const menuItemClass =
-        'group hover:bg-accent/40 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50';
-    const menuItemActiveClass = 'bg-accent/40 text-accent-foreground';
+        'group relative inline-flex h-8 text-neutral-950 w-max items-center justify-center text-md font-normal transition-colors after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-[#8D8370] after:transition-all after:duration-300 hover:text-accent-foreground hover:after:w-full focus:outline-none';
+    const menuItemActiveClass = 'text-accent-foreground after:w-full';
 
     return (
-        <NavigationMenu>
-            <NavigationMenuList className="space-x-1">
+        <NavigationMenu className="overflow-visible">
+            <NavigationMenuList className="gap-6">
                 {NAV_LINKS.map((item) => {
-                    const Icon = item.icon;
                     return (
                         <NavigationMenuItem key={item.path}>
                             <Link
@@ -29,7 +28,6 @@ export function Navbar() {
                                     isActive(item.path) && menuItemActiveClass
                                 )}
                             >
-                                <Icon size={16} className="mr-2" />
                                 {t(item.name as any)}
                             </Link>
                         </NavigationMenuItem>

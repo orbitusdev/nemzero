@@ -19,7 +19,7 @@ interface PageHeroProps {
 const variantStyles = {
     default: {
         container: 'mx-auto mb-10 max-w-3xl text-center leading-22',
-        h2: 'font-semibold text-cyan-500 dark:text-shadow-2xs',
+        h2: 'font-semibold dark:text-shadow-2xs',
         h1: 'text-5xl leading-18 font-bold',
         p: 'mt-10 text-xl'
     },
@@ -31,7 +31,7 @@ const variantStyles = {
     },
     large: {
         container: 'mx-auto mb-16 max-w-4xl text-center',
-        h2: 'text-lg font-semibold text-cyan-500 dark:text-shadow-2xs',
+        h2: 'text-lg font-semibold dark:text-shadow-2xs',
         h1: 'text-6xl lg:text-7xl font-extrabold',
         p: 'mt-12 text-2xl'
     },
@@ -51,6 +51,28 @@ const gradientStyles = {
     pink: 'bg-gradient-to-r from-pink-500 to-rose-500'
 };
 
+const gradientTextStyles = {
+    blue: {
+        h2: 'text-cyan-500',
+        p: 'text-gray-800 dark:text-gray-300'
+    },
+    purple: {
+        h2: 'text-purple-500',
+        p: 'text-gray-800 dark:text-gray-300'
+    },
+    green: {
+        h2: 'text-green-500',
+        p: 'text-gray-800 dark:text-gray-300'
+    },
+    orange: {
+        h2: 'text-orange-500',
+        p: 'text-gray-800 dark:text-gray-300'
+    },
+    pink: {
+        h2: 'text-pink-500',
+        p: 'text-gray-800 dark:text-gray-300'
+    }
+};
 export function PageHero({
     h1 = '',
     h2 = '',
@@ -64,6 +86,7 @@ export function PageHero({
 }: PageHeroProps) {
     const styles = variantStyles[variant];
     const gradientClass = gradientStyles[gradientVariant];
+    const textGradientStyles = gradientTextStyles[gradientVariant];
 
     return (
         <div className={cn(styles.container, className)}>
@@ -93,7 +116,7 @@ export function PageHero({
                 </nav>
             )}
 
-            {h2 && <h2 className={styles.h2}>{h2}</h2>}
+            {h2 && <h2 className={cn(styles.h2, textGradientStyles.h2)}>{h2}</h2>}
 
             {h1 && (
                 <h1
@@ -109,7 +132,7 @@ export function PageHero({
 
             {children && <div className="mt-6">{children}</div>}
 
-            {p && <p className={styles.p}>{p}</p>}
+            {p && <p className={cn(styles.p, textGradientStyles.p)}>{p}</p>}
         </div>
     );
 }

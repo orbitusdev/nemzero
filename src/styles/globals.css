@@ -1,11 +1,9 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@import './themes.css';
 @import './animation.css';
 @import './styles.css';
 
 @custom-variant dark (&:is(.dark *));
-
 @theme inline {
     --font-sans: var(--font-noto-sans);
     --font-mono: var(--font-noto-mono);
@@ -54,18 +52,18 @@
     --card-foreground: oklch(0.2 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.2 0 0);
-    --primary: oklch(0.55 0.2 250);
-    --primary-foreground: oklch(0.98 0 0);
-    --secondary: oklch(0.95 0.05 250);
-    --secondary-foreground: oklch(0.3 0 0);
-    --muted: oklch(0.96 0.02 250);
+    --primary: oklch(0.6 0.22 50);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.97 0.03 50);
+    --secondary-foreground: oklch(0.4 0.05 50);
+    --muted: oklch(0.97 0.02 50);
     --muted-foreground: oklch(0.5 0 0);
-    --accent: oklch(0.95 0.05 250);
-    --accent-foreground: oklch(0.3 0 0);
+    --accent: oklch(0.97 0.03 50);
+    --accent-foreground: oklch(0.4 0.05 50);
     --destructive: oklch(0.65 0.2 25);
     --border: oklch(0.9 0 0);
     --input: oklch(0.9 0 0);
-    --ring: oklch(0.6 0.2 250);
+    --ring: oklch(0.65 0.2 50);
     --chart-1: oklch(0.65 0.2 250);
     --chart-2: oklch(0.6 0.15 180);
     --chart-3: oklch(0.55 0.2 300);
@@ -88,13 +86,13 @@
     --card-foreground: oklch(0.95 0 0);
     --popover: oklch(0.2 0 0);
     --popover-foreground: oklch(0.95 0 0);
-    --primary: oklch(0.6 0.2 250);
-    --primary-foreground: oklch(0.15 0 0);
-    --secondary: oklch(0.25 0.05 250);
+    --primary: oklch(0.6 0.22 50);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.25 0.05 50);
     --secondary-foreground: oklch(0.95 0 0);
-    --muted: oklch(0.25 0.02 250);
+    --muted: oklch(0.25 0.02 50);
     --muted-foreground: oklch(0.7 0 0);
-    --accent: oklch(0.25 0.05 250);
+    --accent: oklch(0.25 0.05 50);
     --accent-foreground: oklch(0.95 0 0);
     --destructive: oklch(0.65 0.15 25 / 0.9);
     --border: oklch(27% 1% 287);
@@ -291,5 +289,14 @@
             opacity: 1;
             transform: scale(1.2);
         }
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
     }
 }

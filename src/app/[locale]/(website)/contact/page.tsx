@@ -17,8 +17,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Page() {
     const t = await getTranslations('contact');
     return (
-        <div className="w-full px-4 lg:mx-auto lg:w-7xl lg:p-0">
+        <div className="relative w-full px-4 lg:mx-auto lg:w-7xl lg:p-0">
             <PageHero
+                gradientVariant="orange"
                 h1={t('pageHero.title')}
                 h2={t('pageHero.subtitle')}
                 p={t('pageHero.description')}

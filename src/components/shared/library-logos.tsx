@@ -107,11 +107,11 @@ function CompactLibraryLogosView() {
                     {t('technologies.title')}
                 </p>
             </div>
-            <div className="grid max-w-5xl grid-cols-5 items-center justify-center gap-12">
+            <div className="flex max-w-5xl flex-wrap justify-center gap-5 lg:gap-12">
                 {logos.map((logo) => (
                     <div
                         key={logo.alt}
-                        className="flex h-30 w-30 items-center justify-center rounded-sm bg-white shadow-2xs shadow-amber-50"
+                        className="flex h-25 w-25 place-items-center items-center justify-center rounded-sm bg-white shadow-2xs shadow-amber-50 lg:h-30 lg:w-30"
                     >
                         <ThemedImage
                             darkSrc={logo.darkSrc}

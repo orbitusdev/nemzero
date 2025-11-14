@@ -14,7 +14,7 @@ export function Footer() {
     const t = useTranslations();
 
     return (
-        <footer className="my-10 flex w-full flex-col items-center justify-center lg:mx-auto lg:w-7xl">
+        <footer className="flex w-full flex-col items-center justify-center px-10 lg:mx-auto lg:my-10 lg:w-7xl lg:px-0">
             <div className="relative">
                 <section className="py-6">
                     <div className="grid gap-6 lg:grid-cols-7">
@@ -23,7 +23,6 @@ export function Footer() {
                             <p className="text-muted-foreground my-4 leading-relaxed">
                                 {t('common.description')}
                             </p>
-
                             <div className="flex gap-2">
                                 {SOCIAL_LINKS.map((social, index) => (
                                     <Button
@@ -45,21 +44,23 @@ export function Footer() {
                                 ))}
                             </div>
                         </div>
-                        <FooterMenu
-                            title={t('common.navigation.products')}
-                            icon={Palette}
-                            iconBgColor="bg-blue-500/10"
-                            iconTextColor="text-blue-500"
-                            links={FOOTER_LINKS.SECTION1}
-                        />
-                        <FooterMenu
-                            title={t('common.navigation.support')}
-                            icon={Heart}
-                            iconBgColor="bg-green-500/10"
-                            iconTextColor="text-green-500"
-                            links={FOOTER_LINKS.SECTION2}
-                        />
-                        <div className="lg:col-span-2">
+                        <div className="flex gap-20 border-t pt-10 pb-6 lg:col-span-2 lg:border-0 lg:pt-0 lg:pb-0">
+                            <FooterMenu
+                                title={t('common.navigation.products')}
+                                icon={Palette}
+                                iconBgColor="bg-blue-500/10"
+                                iconTextColor="text-blue-500"
+                                links={FOOTER_LINKS.SECTION1}
+                            />
+                            <FooterMenu
+                                title={t('common.navigation.support')}
+                                icon={Heart}
+                                iconBgColor="bg-green-500/10"
+                                iconTextColor="text-green-500"
+                                links={FOOTER_LINKS.SECTION2}
+                            />
+                        </div>
+                        <div className="border-t pt-10 pb-6 lg:col-span-2 lg:border-0 lg:pt-0 lg:pb-0">
                             <CompactNewsletter />
                         </div>
                     </div>

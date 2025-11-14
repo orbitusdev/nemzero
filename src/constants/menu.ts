@@ -9,6 +9,7 @@ interface NavLink {
 
 const NAV_LINKS: readonly NavLink[] = [
     { name: 'common.navigation.home', description: '', path: '/', icon: IconHome },
+    { name: 'common.navigation.about', description: '', path: '/about/', icon: IconHome },
     {
         name: 'common.navigation.contact',
         description: '',

@@ -47,7 +47,7 @@ export const CompactLocaleSwitcher = () => {
                         <Button
                             variant="ghost"
                             size="sm"
-                            className="border-border/0 h-8 gap-2 rounded-lg border bg-none px-1 pl-2 transition-all duration-200 hover:bg-white"
+                            className="border-border/0 h-8 gap-2 rounded-lg border bg-white bg-none px-1 pl-2 transition-all duration-200 hover:border hover:border-amber-300/40 hover:bg-white/80"
                         >
                             <Image
                                 src={currentLocaleData.flag}

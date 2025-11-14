@@ -33,40 +33,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
                 sizes: '512x512',
                 type: 'image/png'
             }
-        ],
-        screenshots: [
-            {
-                form_factor: 'wide',
-                src: `${baseUrl}/screenshots/screenshot-1.png`,
-                label: 'Home',
-                sizes: '1920x871'
-            },
-            {
-                form_factor: 'wide',
-                src: `${baseUrl}/screenshots/screenshot-2.png`,
-                label: 'About',
-                sizes: '1920x871'
-            },
-            {
-                form_factor: 'wide',
-                src: `${baseUrl}/screenshots/screenshot-3.png`,
-                label: 'Pricing',
-                sizes: '1920x871'
-            },
-            {
-                form_factor: 'wide',
-                src: `${baseUrl}/screenshots/screenshot-4.png`,
-                label: 'Contact',
-                sizes: '1920x871'
-            },
-            {
-                form_factor: 'wide',
-                src: `${baseUrl}/screenshots/screenshot-5.png`,
-                label: 'Login',
-                sizes: '1920x871'
-            }
         ]
-        // gcm_sender_id: '103953800507'
     };
     return manifest;
 }

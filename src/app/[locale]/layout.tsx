@@ -48,10 +48,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <ThemeProvider
                         attribute="class"
-                        defaultTheme="system"
-                        enableSystem
+                        defaultTheme="light"
                         disableTransitionOnChange
-                        themes={['light', 'dark', 'theme-zinc', 'theme-rose']}
+                        themes={['light', 'dark']}
                         storageKey="nitrokit-theme"
                     >
                         <TooltipProvider delayDuration={100}>{children}</TooltipProvider>

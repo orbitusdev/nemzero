@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-import { generatePageMetadata, verifyEmailAction } from '@/lib';
+import { verifyEmailAction } from '@/lib';
 import { Metadata } from 'next';
 import { VerifyStatusCard } from './components/verify-status-card';
+import { generatePageMetadata } from '@nitrokit/core';
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('auth.verification');

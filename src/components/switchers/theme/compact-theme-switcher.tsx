@@ -10,7 +10,7 @@ import {
     TooltipContent,
     TooltipTrigger
 } from '@/components/ui';
-import { useNextTheme } from '@/hooks';
+import { useNextTheme } from '@nitrokit/core';
 
 export const CompactThemeSwitcher = () => {
     const [theme, mounted, setTheme] = useNextTheme();

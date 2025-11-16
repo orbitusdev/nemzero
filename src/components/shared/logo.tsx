@@ -1,6 +1,6 @@
 import { Link } from '@/lib/i18n/navigation';
 import { ThemedImage } from '@/components/shared';
-import { cn } from '@/lib';
+import { cn } from '@nitrokit/core';
 import { useTranslations } from 'next-intl';
 
 export function Logo({ className = '' }: { className?: string }) {

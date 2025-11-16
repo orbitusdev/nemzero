@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AUTH_ROUTES } from '@/lib/auth/constants';
 import Link from 'next/link';
-import { translateRichSafely } from '@/lib';
+import { translateRichSafely } from '@nitrokit/core';
 
 export function AuthErrorComponent() {
     const t = useTranslations('auth.error');

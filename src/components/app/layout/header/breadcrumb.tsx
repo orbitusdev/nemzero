@@ -12,7 +12,7 @@ import {
     BreadcrumbSeparator
 } from '@/components/ui';
 import { Link, usePathname } from '@/lib/i18n/navigation';
-import { translateSafely } from '@/lib/utils';
+import { translateSafely } from '@nitrokit/core';
 import { APP_ROUTES } from '@/lib/auth/constants';
 
 function filterLocaleSegments(segments: string[]) {

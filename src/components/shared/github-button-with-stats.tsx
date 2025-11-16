@@ -3,10 +3,8 @@
 import { GITHUB_URL } from '@/constants/site';
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { useCanvasConfetti } from '@/hooks/useCanvasConfetti';
-import { formatCompactNumber } from '@/lib';
+import { useCanvasConfetti, useGithubStats, formatCompactNumber } from '@nitrokit/core';
 import { Github, Star, GitFork, ExternalLink } from 'lucide-react';
-import { useGithubStats } from '@/hooks/useGithubStats';
 
 export function GithubButtonWithStats() {
     const t = useTranslations('common');

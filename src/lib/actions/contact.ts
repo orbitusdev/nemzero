@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { SimpleTFunction } from '@/types/i18n';
 
-import { getEmailService } from '@/lib/services/email';
+import { getEmailService } from '@nitrokit/core/services/email';
 
 import { render } from '@react-email/render';
 import { ContactEmail } from '@/components/emails';

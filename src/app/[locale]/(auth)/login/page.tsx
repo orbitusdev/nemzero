@@ -3,7 +3,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { AUTH_ROUTES } from '@/lib/auth/constants';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { generatePageMetadata } from '@/lib';
+import { generatePageMetadata } from '@nitrokit/core';
 import { Metadata } from 'next';
 import { LoginFormWrapper } from './components/login-form-wrapper';
 

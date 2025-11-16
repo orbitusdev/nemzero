@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 
 import { Button, Sheet, SheetContent, SheetTrigger } from '@/components/ui';
 import { Link, usePathname } from '@/lib/i18n/navigation';
-import { cn, translateSafely } from '@/lib/utils';
+import { cn, translateSafely } from '@nitrokit/core';
 import { AppNavigationItems } from '@/constants/app';
 import { APP_ROUTES } from '@/lib/auth/constants';
 

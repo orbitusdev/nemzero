@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useSession } from 'next-auth/react';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui';
-import { cn, translateSafely } from '@/lib/utils';
+import { cn, translateSafely } from '@nitrokit/core';
 import { Link, usePathname } from '@/lib/i18n/navigation';
 import { APP_ROUTES } from '@/lib/auth/constants';
 import { AppNavigationItems } from '@/constants/app';

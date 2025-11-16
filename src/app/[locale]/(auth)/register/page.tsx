@@ -4,7 +4,7 @@ import { SignWithButtons } from '../components/sign-with-buttons';
 import { FormCard } from '../components/form-card';
 import { Link } from '@/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { generatePageMetadata } from '@/lib';
+import { generatePageMetadata } from '@nitrokit/core';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 

@@ -28,7 +28,7 @@ import {
     SheetTitle,
     ScrollArea
 } from '@/components/ui';
-import { cn } from '@/lib';
+import { cn } from '@nitrokit/core';
 import { APP_ROUTES } from '@/lib/auth/constants';
 
 export function AccountNavigation() {

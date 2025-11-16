@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
+  - '@firebase/util'
   - '@prisma/client'
   - '@prisma/engines'
   - '@swc/core'
@@ -6,5 +7,6 @@ onlyBuiltDependencies:
   - esbuild
   - msw
   - prisma
+  - protobufjs
   - sharp
   - unrs-resolver

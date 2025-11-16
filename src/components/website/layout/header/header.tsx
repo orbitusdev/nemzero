@@ -2,7 +2,7 @@
 
 import { Navbar } from '@/components/website/navigation';
 import { Logo } from '@/components/shared/';
-import { useStickyNavbar } from '@/hooks';
+import { useStickyNavbar } from '@nitrokit/core';
 import { CompactLocaleSwitcher } from '@/components/switchers';
 import { SOCIAL_LINKS } from '@/constants';
 import { Button } from '@/components/ui';

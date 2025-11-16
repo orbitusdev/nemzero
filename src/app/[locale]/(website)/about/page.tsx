@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Target, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
-import { generatePageMetadata } from '@/lib';
+import { generatePageMetadata } from '@nitrokit/core';
 import { PageHero } from '@/components/website/layout';
 
 export async function generateMetadata(): Promise<Metadata> {

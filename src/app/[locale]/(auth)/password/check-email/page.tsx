@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { generatePageMetadata } from '@/lib';
+import { generatePageMetadata } from '@nitrokit/core';
 import { Metadata } from 'next';
 import { PasswordResetSentCard } from './components/password-reset-sent-card';
 import { Link } from '@/lib/i18n/navigation';
